@@ -49,4 +49,32 @@ This ensures that only reliable data is recovered and usable for further analysi
 ---
 
 ## 📦 Repository Contents
+File_Recovery/
+│
+├── Files_Recover.ipynb # Jupyter Notebook with recovery & validation logic
+├── Before_Recovery.png # Screenshot showing files before recovery
+├── After_Recovery.png # Screenshot showing recovered files
+├── README.md # Project documentation
+└── LICENSE # MIT License
+
+
+---
+
+## ▶️ How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sameer2202/File_Recovery.git
+   cd File_Recovery
+
+
+2. Install the required library:
+   pip install filetype
+
+3. Open and run Files_Recover.ipynb in Jupyter or Google Colab.
+4. Update the paths inside the notebook:
+   source_folder = "path_to_your_source_files"
+   output_folder = "path_to_your_recovered_files"
+
+6. Run all cells — recover valid files while skipping corrupted files.
 
