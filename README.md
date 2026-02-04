@@ -1,47 +1,52 @@
-# File Recovery & Data Validation using Python
+# 📁 File Recovery & Data Validation using Python
 
-## Overview
-This project demonstrates how analytical thinking can be applied to solve a real-world data integrity problem, where files copied to external storage (such as a pendrive) appear successful but are missing or corrupted.
+## 🧠 Overview
+This project applies analytical thinking and Python programming to solve a real-world data integrity problem — where files appear to be copied to external storage (like a pendrive) but are missing, corrupted, or unreadable.
 
-The solution verifies file presence at the system level and then applies Python-based content validation to recover only usable files.
-
----
-
-## Problem Statement
-In many cases:
-- Files seem to be copied correctly
-- No error message is shown
-- But files are missing, unreadable, or corrupted
-
-This can lead to data loss and incorrect analysis.  
-This project focuses on verifying data existence and data quality before further use.
+Instead of simply relying on visible confirmation, this solution verifies file presence and ensures only valid files are recovered for further use.
 
 ---
 
-## Solution Approach
-1. Verify whether files actually exist using wildcard search (for example, `*ch`) in the file explorer.
-2. Read files in binary mode using Python.
-3. Detect the actual file type based on file content, not file extension.
-4. Separate recoverable files from corrupted ones.
-5. Copy only valid files to a user-defined output location without modifying the original data.
+## 🎯 Problem Statement
+When files are copied manually:
+- They may appear to copy successfully  
+- The system shows no error  
+- But the files are actually missing or corrupted  
+
+This can lead to:
+✔ Data loss  
+✔ Incorrect analysis results  
+✔ Wasted time and rework  
+
+This project focuses on **validating files before using them for analysis or insights**.
 
 ---
 
-## Technologies Used
-- Python 3
-- filetype library
-- Jupyter Notebook / Google Colab
+## 🛠️ Solution Approach
+
+### 🔍 Step 1: File Presence Check
+Using file explorer search (e.g., `*ch`), confirm whether the copied files actually exist in the destination folder before running recovery logic.
 
 ---
 
-## Repository Contents
-- `Files_Recover.ipynb` – Jupyter Notebook containing file recovery and validation logic  
-- `README.md` – Project documentation  
+### 🐍 Step 2: Python-Based Content Validation
+1. Read files in **binary mode**
+2. Detect actual file type based on **content**, not extension
+3. Classify files into:
+   - ✅ Recoverable (valid content)
+   - ❌ Corrupted / Unrecoverable
+4. Copy only valid files to a user-defined output folder
+
+This ensures that only reliable data is recovered and usable for further analysis.
 
 ---
 
-## How to Run
-1. Clone the repository.
-2. Install the required dependency:
-   ```bash
-   pip install filetype
+## 🧰 Technologies Used
+- Python 3  
+- `filetype` library  
+- Jupyter Notebook (.ipynb)
+
+---
+
+## 📦 Repository Contents
+
